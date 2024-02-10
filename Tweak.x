@@ -1,5 +1,5 @@
-#import "../YouTubeHeader/YTPlayerViewController.h"
-#import "../YouTubeHeader/YTWatchController.h"
+#import <YouTubeHeader/YTPlayerViewController.h>
+#import <YouTubeHeader/YTWatchController.h>
 
 @interface YTPlayerViewController (YTAFS)
 - (void)autoFullscreen;
