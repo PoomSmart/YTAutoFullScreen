@@ -19,3 +19,12 @@
 }
 
 %end
+
+//exit fullscreen (When video playback ends)
+%hook YTWatchFlowController
+
+- (bool)shouldExitFullScreenOnFinish {
+    return 1;
+}
+
+%end
