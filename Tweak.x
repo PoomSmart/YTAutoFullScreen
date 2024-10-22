@@ -12,7 +12,12 @@
     [NSTimer scheduledTimerWithTimeInterval:0.75 target:self selector:@selector(autoFullscreen) userInfo:nil repeats:NO];
 }
 
-%new
+- (void)prepareToLoadWithPlayerTransition:(id)arg1 expectedLayout:(id)arg2 {
+    %orig;
+    [NSTimer scheduledTimerWithTimeInterval:0.75 target:self selector:@selector(autoFullscreen) userInfo:nil repeats:NO];
+}
+
+%new(v@:)
 - (void)autoFullscreen {
     YTWatchController *watchController = [self valueForKey:@"_UIDelegate"];
     [watchController showFullScreen];
