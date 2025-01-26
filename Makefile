@@ -1,4 +1,8 @@
-TARGET := iphone:clang:latest:11.0
+ifeq ($(THEOS_PACKAGE_SCHEME),rootful)
+TARGET = iphone:clang:latest:11.0
+else
+TARGET = iphone:clang:latest:15.0
+endif
 ARCHS = arm64
 PACKAGE_VERSION = 1.0.4
 INSTALL_TARGET_PROCESSES = YouTube
